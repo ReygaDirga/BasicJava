@@ -1,0 +1,41 @@
+1. Asosiasi itu hubungan antara dua kelas yang bisa independen alias nggak harus saling bergantung. 
+Jadi, satu objek bisa ada tanpa harus ada objek lainnya.
+
+🔹 Ciri-ciri:
+✅ Hubungan antara dua kelas
+✅ Bisa one-to-one, one-to-many, many-to-many
+✅ Objek bisa eksis sendiri tanpa objek lain
+
+Contoh Asosiasi
+Misalnya kita punya kelas Dosen dan Mahasiswa. Mereka punya hubungan, 
+tapi satu mahasiswa bisa punya banyak dosen, dan sebaliknya.
+============================================================================================================
+2. Agregasi
+Agregasi itu hubungan "has-a" (memiliki) tapi weak relationship. 
+Artinya, objek child bisa tetap ada meskipun objek parent dihapus.
+
+🔹 Ciri-ciri:
+✅ Hubungan whole-part (keseluruhan-bagian)
+✅ Objek bagian bisa eksis tanpa objek keseluruhan
+
+Contoh Agregasi
+Misalnya Universitas punya beberapa Mahasiswa, tapi kalau Universitas dihapus, Mahasiswa tetap ada.
+============================================================================================================
+3. Komposisi
+Komposisi mirip agregasi, tapi lebih kuat (strong relationship). Kalau objek parent dihapus, objek child juga ikut hilang.
+
+🔹 Ciri-ciri:
+✅ Hubungan whole-part tapi lebih kuat
+✅ Kalau objek utama dihapus, bagian juga ikut hilang
+✅ Biasanya direpresentasikan dengan objek dibuat dalam konstruktor
+
+Contoh Komposisi
+Misalnya Perpustakaan punya beberapa Buku, kalau Perpustakaan dihapus, semua Buku juga hilang.
+
+========================================================================================================
+Konsep         |    Hubungan           |    Contoh                   |  Child bisa hidup tanpa parent? |
+========================================================================================================
+Asosiasi       |    independen         |    Dosen & Mahasiswa        |  Bisa                           |
+Agregasi       |    Weak "Has-A"       |    Universitas & Mahasiswa  |  Bisa                           |
+Composition    |    Strong "Has-A"     |    Perpustakaan & Buku      |  Tidak Bisa                     |
+========================================================================================================
