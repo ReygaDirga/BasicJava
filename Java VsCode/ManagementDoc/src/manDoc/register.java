@@ -25,7 +25,7 @@ class Document {
     }
 
     public void display() {
-        System.out.println("Nama: " + name + ", Ukuran: " + size + "MB, Status: " + status);
+        System.out.println(name + " {"+ size + "MB}  - " + status);
     }
 }
 

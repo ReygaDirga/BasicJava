@@ -20,10 +20,14 @@ class Storage {
         if (documents.isEmpty()) {
             System.out.println("Tidak ada dokumen tersimpan.");
         } else {
+            System.out.println("View All Document");
+            System.out.println("===================================");
             for (int i = 0; i < documents.size(); i++) {
                 System.out.print((i + 1) + ". ");
                 documents.get(i).display();
             }
+            System.out.println("");
+            System.out.println("");
         }
     }
 
