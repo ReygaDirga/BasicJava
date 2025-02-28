@@ -2,10 +2,9 @@ package manDoc;
 import java.util.*;
 
 public class doc {
-
+    private static Storage storage = new Storage();
     public doc(){
         int input;
-        Storage storage = new Storage();
         do {
             System.out.println("HOV DOCUMENT MANAGER");
             System.out.println("===================================");
@@ -19,13 +18,14 @@ public class doc {
             input = sc.nextInt();
             switch (input) {
                 case 1:
-                    register reg = new register();
+                    register reg = new register(storage);
                     reg.registerDocument();
                     break;
                 case 2:
                     storage.viewDocuments();
                     break;
                 case 3:
+                    storage.viewDocuments();
                     System.out.print("Masukkan nomor dokumen yang ingin di-approve: ");
                     int index = sc.nextInt() - 1;
                     storage.approveDocument(index);

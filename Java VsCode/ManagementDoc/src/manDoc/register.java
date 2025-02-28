@@ -30,6 +30,11 @@ class Document {
 }
 
 public class register {
+    private Storage storage;
+    public register(Storage storage){
+        this.storage = storage;
+    }
+
     public void registerDocument(){
         Scanner scanner = new Scanner(System.in);
         System.out.print("Masukkan nama dokumen: ");
@@ -40,8 +45,12 @@ public class register {
 
         if (size > 0) {
             Document doc = new Document(name, size);
-            Storage storage = new Storage();
-            storage.addDocument(doc);
+            boolean success = storage.addDocument(doc);
+            if(success){
+                System.out.println("Dokumen berhasil ditambahkan!");
+            } else {
+                System.out.println("Dokumen gagal ditambahkan!");
+            }
         } else {
             System.out.println("Ukuran dokumen harus lebih dari 0!");
         }
